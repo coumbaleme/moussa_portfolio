@@ -1,465 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
- 
+<html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Moussa</title>
 
-            @import url('http://fonts.googleapis.com/css2?family=Pop');
- 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-family: "poppins,sans-serif";
-    text-decoration: none;
-    list-style: none;
-}
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 35px 12px;
-    background: black;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    
-}
-.logo{
-    font-size: 25px;
-    color: white;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-.logo:hover{
-    color: orangered;
-    text-shadow: 0 0 25 orangered,
-                 0 0 50px orangered;
-   transform: social(1.1);
-}
-span{
-    color: orangered;
-}
-.navbar a{
-    font-size: 10px;
-    color: white;
-    font-weight: 500;
-    margin: 0 20px;
-    border-color: 3px solid transparent;
-    transition: 0.3s ease;
-}
-.navbar a:hover,
-.navbar a .active{
-    color: orangered;
-    border-bottom: 3px solid orangered;
-}
-.contact{
-    padding: 10px 20 px;
-    background-color: white;
-    color: black;
-    border: 2px solid transparent;
-    font-size: 16px;
-    border-radius: 8px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-}
-.contact:hover{
-    background-color: orangered;
-    box-shadow: 0 0 25px orangered;
-    color: white;
-}
-.home{
-    width: 100%;
-    min-height: 100vh;
-    background: yellowgreen;
-    display: flex;
-    align-items: center;
-    gap: 7rem;
-    padding: 30px 12% 0;
-}
-.home1{
-    width: 100%;
-    min-height: 100vh;
-    background: red;
-    display: flex;
-    align-items: center;
-    gap: 7rem;
-    padding: 30px 12% 0;}
-.home-content{
-    max-width: 800px;
- 
-}
-.home-content h3{
-    font-size: 32px;
-}
-.home-content h1{
-    font-size: 35px;
-    line-height: 1.1;
+  <!-- Font Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    .header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+    .logo span { color: orangered; }
+    .logo:hover {
+      color: orangered;
+      text-shadow: 0 0 15px orangered;
+      transform: scale(1.1);
+    }
+    .navbar a {
+      margin: 0 15px;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+      color: orangered;
+      border-bottom: 2px solid orangered;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 10%;
+    }
+    .home {
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: yellowgreen;
+      gap: 2rem;
+    }
+    .home-content h1 { font-size: 36px; }
+    .home-content h1 span { color: orangered; }
+    .home-content p { margin: 20px 0; }
+
+    .btn-box {
+      display: flex; gap: 1rem;
+    }
+    .btn-1, .btn-2 {
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-1 {
+      background: black; color: white;
+    }
+    .btn-1:hover {
+      background: white; color: black; border: 2px solid black;
+    }
+    .btn-2 {
+      background: orangered; color: white;
+    }
+    .btn-2:hover {
+      background: white; color: orangered;
+    }
+    .img-box img {
+      border-radius: 50%;
+      width: 300px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: black;
+      color: white;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about-img img {
+      width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px orangered, 0 0 50px orangered;
+    }
+    .profile-section {
+  padding: 80px 10%;
+  background: #f9fafc;
+  text-align: center;
 }
 
-main {
-    margin-top: 100px; 
-    background-color: cadetblue;
+.profile-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
 }
-.home-content p{
-   
- 
-    color: white;
-    font-size: 17px;
-    margin: 2em 0 3em;
+
+.profile-section h2 span {
+  color: orangered;
 }
-.btn-box{
-    width: 345px;
-    display: flex;
-    gap: 2rem
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
-.btn-1{
-    padding: 15px 20px;
-    background-color: black;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    cursor: pointer;
+
+.profile-img img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px orangered, 0 0 50px orangered;
 }
-.btn-1:hover{
-    background-color: wheat;
-    color: black;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600px;
-    transition: 0.3s ease;
-   
-    cursor: pointer;
+
+.profile-content {
+  max-width: 500px;
+  text-align: left;
 }
-.btn-2{
-    padding: 15px 20px;
-    background-color: orangered;
-    color: white;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3s ease;
-    cursor: pointer;
+
+.profile-content h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: black;
 }
-.btn-2:hover{
-    background-color: white;
-    color: orangered;
+
+.profile-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
 }
-.img-box img{
-    border-radius: 50%;
-    width: 550px;
+
+.skills {
+  margin-bottom: 20px;
 }
-::-webkit-scrollbar{
-    width: 15px;
+
+.skills h4 {
+  margin-bottom: 10px;
+  color: orangered;
 }
-::-webkit-scrollbar-thumb{
-    background-color: orangered;
+
+.skills ul {
+  list-style: none;
+  padding: 0;
 }
-::-webkit-scrollbar-track{
-    background-color: black;
-    width: 50px;
+
+.skills li {
+  margin: 8px 0;
+  font-size: 15px;
 }
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16% 18%;
-    gap: 10em;
-    background: black;
+
+.skills i {
+  margin-right: 8px;
+  color: orangered;
 }
-.about-img img{
-    position: relative;
-    width: 550px;
-    box-shadow: 0 0 25px orangered,
-               0 0 50px orangered;
-               border-radius: 50%;
+
+.info p {
+  font-size: 15px;
+  margin: 5px 0;
 }
-.about-content h3{
-    font-size: 62px;
-    color: white;
+
+.info a {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: none;
 }
-.about-content h2{
-    text-align: left;
-    color: white;
-    font-size: 42px;
+.info a:hover {
+  text-decoration: underline;
 }
-.about-content p{
-    color: white;
-    font-size: 20px;
-    margin: 2em 0 3em;
-}
-.contact-form h2{
-    text-align: center;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    font-size: 30px;
-}
-.contact-form form{
-    max-width: 50em;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
- 
-}
-.contact-form form .input-box{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
- 
-}
-.contact-form form .input-box input,
-.contact-form form textarea
-{
-    width: 100%;
-    padding: 1.5em;
-    font-size: 10px;
-    color: black;
-    background-color: rgb(204, 100, 100);
-    border-radius: 2rem;
-    margin: 1rem 0;
-    resize: none;
- 
-}
-.footer{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    padding: 40px 0;
-    background-color: black;
-}
-.footer .social{
-    text-align: center;
-    padding-bottom: 25px;
-    color: white
-}
-.footer .social a{
-    color: white;
-    font-size: 24px;
-    border: 2px solid yellowgreen;
-    width: 40px;
-    height: 40px;
-    line-height: 18px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 8px;
-    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered
-    ;
-    transition: 0 .3s ease;
-}
- 
-.footer .social a :hover{
-    transform: scale(1.2)translateY(-10px);
-    color: goldenrod;
-    border: 2px solid orangered;
- 
-}
-.footer ul{
-    margin-top: 0;
-    padding: 0;
-    font-size: 10px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
-}
-.footer ul li a{
-    color: white;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s ease ;
- 
-}
-.footer ul li a:hover{
-    border-bottom: 3px solid orangered;
-}
- 
-.footer ul li{
-    display: inline-block;
-    padding: 0 15 px;
-}
-.footer .copyright{
-    margin-top: 15px;
-    text-align: center;
-    font-size: 12px;
-    color: white
-    ;
-}
-        
-        
-        
-        
-        
-        </style>
+
+
+    /* PROJECTS */
+    .projects-section {
+      background: #f0f4f8;
+      text-align: center;
+    }
+    .projects {
+      display: grid;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .card h2 { color: #0ea5a4; margin-bottom: 10px; }
+
+    /* CONTACT */
+    .contact-form {
+      padding: 80px 10%;
+      background: #f0f4f8;
+      text-align: center;
+    }
+    .contact-form h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: black;
+    }
+    .contact-form h2 span {
+      color: orangered;
+    }
+    .contact-form form {
+      max-width: 700px;
+      margin: auto;
+    }
+    .contact-form .input-box {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .contact-form .input-box input,
+    .contact-form textarea {
+      flex: 1;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+    .contact-form textarea {
+      width: 100%;
+      resize: none;
+    }
+    .contact-form .btn-1 {
+      margin-top: 15px;
+      background: orangered;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form .btn-1:hover {
+      background: black;
+      color: white;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .footer .social a {
+      margin: 0 8px;
+      color: white;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+    .footer .social a:hover {
+      color: orangered;
+    }
+  </style>
 </head>
- 
+
 <body>
-    <header class="header">
+  <!-- HEADER -->
+  <header class="header">
+    <a href="image/logo_leo_fazcode.webp" class="logo"><span>Moussa</span>Apprentis</a>
+    <nav class="navbar">
+      <a href="#home" class="active">Portfolio</a>
+      <a href="#about">Expérience</a>
+      <a href="#status">Profil</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="home">
+    <div class="home-content">
+      <h3>Salut 👋</h3>
+      <h1>Je suis <span>Moussa</span>, Frontend Developer</h1>
+      <p>Passionné d'informatique,
+         je suis actuellement en formation de développeur web et web mobile à Pole S. 
+         J'ai une bonne maîtrise de la maintenance et des outils informatiques,
+         et j'apprends continuellement de nouveaux langages.</p>
+      <div class="btn-box">
        
-        <a href="#" class="logo"><span>Moussa</span>Apprentis</a>
- 
-        <nav class="navbar">
-            <a href="#home" class="active">Portfolio</a>
-            <a href="#about">Experiance</a>
-            <a href="#status">Profil</a>
-            <a href="#Projet">Projet</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
- 
-    <section id="home" class="home">
-        <div class="home-content">
-            <h3>Hi</h3>
-            <h1>I'm<span>Moussa</span> a Frontend & Developeur</h1>
- 
-            <p>
-                Passionné d'informatique, je suis actuellement en formation de développeur web et web mobile à Pole S.
-                J'ai une bonne maîtrise de la maintenance et des outils informatiques,
-                et j'apprends continuellement de nouveaux langages.
-            </p>
-            <div class="btn-box">
-                <button class="btn-1"><a href="image/Projet_2.PNG">Recrutez-moi</a></button>
-                <button class="btn-2">
-            <a href="/image/CV SANE MOUSSA BTS - Developpeur web et web mobile.pdf" target="_blank" class="btn">CV_Telecharger</a>
-                    <a href="/image/CVSANE MOUSSA BTS - Developpeur web et web mobile.pdf" target="_blank" class="btn"></a>
-                </button>
-            </div>
-        </div>
-        <div class="img-box">
-            <img src="/image/numerique-multimedia-700x350.jpg" alt="" />
-        </div>
-    </section>
-    <section id="about" class="about">
-        <div class="about-img">
-            <img src="/image/numerique-multimedia-700x350.jpg" alt="" />
-        </div>
- 
-        <div id="Profil" class="about-content">
-            <h2 class="heading">about <span>Me</span></h2>
-            <h3>Front <span>Developeur</span></h3>
-            <p>
-                Monter un poste de travail, installer du matériel et des
-                périphériques, gérer le parc informatique Equipement et accompagnement
-                d'un groupe de 12 personnes: présentation, accompagnement à la prise
-                en main du matériel, suivi et intervention jusqu'à l'autonomie..
-            </p>
-            <a href="#" class="btn-2">Experience</a>
-
-            
-        </div>
-    </section>
-
-    
-  <section id="Projet" class="home1">
-    <div class="home-content">
-      <h1>Mes Projets</h1>
-      <ul>
-        <li>✔️ Site vitrine en HTML/CSS</li>
-        <li>✔️ Application JavaScript de gestion de tâches</li>
-        <li>✔️ Clonage d'une interface responsive</li>
-
-        <li>✔️ Mqsql</li>
-        <li>✔️ Symfony</li>
-      </ul>
-
-      
+        <a href="image/CV-dev.pdf" target="_blank" class="btn-2">Télécharger CV</a>
+      </div>
     </div>
-    <a href="image/Mon_Projet.png" class="btn-2">Projet</a>
-    
-
+    <div class="img-box">
+      <img src="image/logo_leo_fazcode.webp" alt="">
+    </div>
   </section>
 
-  <section id="status" class="home">
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-img">
+      <img src="/image/numerique-multimedia-700x350.jpg" alt="Moussa">
+    </div>
+    <div class="about-content">
+      <h2>À propos de <span>Moi</span></h2>
+      <h3>Développeur Front-End</h3>
+      <p>Expérience en maintenance informatique et accompagnement utilisateurs. 
+         Actuellement en apprentissage des technologies web modernes.</p>
+    </div>
+  </section>
+  <!-- PROFIL -->
+<section id="status" class="profile-section">
+  <h2>Mon <span>Profil</span></h2>
+  <div class="profile-container">
     
-    <div class="home-content">
-      <h1>Mon Profil</h1>
-      <h5>Je suis un développeur web PHP créatif</h5>
+    <!-- Image -->
+    <div class="profile-img">
+      <img src="/image/numerique-multimedia-700x350.jpg" alt="MoussaApprentis">
+    </div>
+
+    <!-- Contenu -->
+    <div class="profile-content">
+      <h3>👋 Je suis Moussa</h3>
       <p>
-        Je suis Moussa, passionné par l'informatique, technicien en formation et développeur motivé. 
-        Je maîtrise la maintenance informatique, la configuration de postes de travail, et l'accompagnement d'utilisateurs.
-         Je suis un développeur web polyvalent. J'ai une bonne connaissance des techniques front-end et je suis capable de créer des sites web dynamiques et interactifs en utilisant les dernières technologies. Je suis également un développeur backend compétent, capable de créer des applications web robustes et évolutives. Je suis un développeur web passionné,
-         toujours à la recherche de nouveaux défis et de nouvelles opportunités pour apprendre et grandi
+         Passionné par l'informatique, technicien en formation et développeur motivé.
+        Je maîtrise la maintenance informatique, la configuration de postes de travail, 
+        et l'accompagnement d'utilisateurs. Je suis un développeur web polyvalent.
+        J'ai une bonne connaissance des techniques front-end et je suis capable de créer des sites web dynamiques et interactifs en utilisant les dernières technologies. 
+        Je suis également un développeur backend compétent, capable de créer des applications web robustes et évolutives.
+        Je suis un développeur web passionné,
+        toujours à la recherche de nouveaux défis et de nouvelles opportunités pour apprendre et grandir.
+
       </p>
-      
-    </div>
-<div class="container">
-    <div class="info">
-      
-      <p>💻 Développeur Front-End & Back-End</p>
-      <p>🛠️ Technologies : HTML, CSS, JS, React, Node.js</p>
-      <p>📧 Email : moussasane40@email.com</p>
-      <p>🌐 Portfolio : <a href="#">www.Moussa_dev</a></p>
-    </div>
-    
-  </section>
-    
-    
- 
-    <section id="contact" class="contact-form">
-        <h2 id="contact" class="contact-me">Contact <span>Me</span></h2>
- 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="full Name" />
-                <input type="email" placeholder="Email" />
-            </div>
- 
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number" />
-                <input type="text" placeholder="Subject" />
-            </div>
- 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn-1" />
-        </form>
-    </section>
-    <footer class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"><i
-                    class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/watch?v=4USW2LgNO6Y&list=PLeVsejBb88k86MGwyWOb-1suKUv6AHUe6&index=5"><i
-                    class="fa-brands fa-youtube"></i></a>
-            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href="#">Service</a>
-            </li>
-            <li>
-                <a href="#">About Me</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <a href="#">Pravacy policy</a>
-            </li>
+
+      <!-- Compétences -->
+      <div class="skills">
+        <h4>💻 Compétences</h4>
+        <ul>
+          <li><i class="fa-brands fa-html5"></i> HTML5 / CSS3</li>
+          <li><i class="fa-brands fa-js"></i> JavaScript / React</li>
+          <li><i class="fa-brands fa-php"></i> PHP / Symfony</li>
+          <li><i class="fa-solid fa-database"></i> MySQL</li>
+          <li><i class="fa-brands fa-github"></i> Git / GitHub</li>
         </ul>
-        <p class="copyright">O 2025 Moussa all rigt reserved</p>
-    </footer>
+      </div>
+
+      <!-- Infos -->
+      <div class="info">
+        <p>📧 <b>Email :</b> moussasane40@gmail.com</p>
+        <p>🌐 <b>Portfolio :</b> <a href="#">www.moussa-dev.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects-section">
+    <h1>Mes Projets</h1>
+    <div class="projects">
+      <div class="card">
+        <h2>1. Site vitrine – HTML/CSS</h2>
+        <p>Un site statique avec accueil, services, contact.</p>
+      </div>
+      <div class="card">
+        <h2>2. Application de tâches – JavaScript</h2>
+        <p>Ajouter, modifier, supprimer et cocher des tâches.</p>
+      </div>
+      <div class="card">
+        <h2>3. Interface responsive</h2>
+        <p>Clonage d’un site populaire en responsive design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+<section id="contact" class="contact-form">
+  <h2>Contact <span>Me</span></h2>
+  <form id="contactForm">
+    <div class="input-box">
+      <input type="text" name="user_name" placeholder="Nom complet" required />
+      <input type="email" name="user_email" placeholder="Email" required />
+    </div>
+    <div class="input-box">
+      <input type="text" name="subject" placeholder="Sujet" required />
+      <input type="tel" name="phone" placeholder="Téléphone" />
+    </div>
+    <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
+    <button type="submit" class="btn-1">Envoyer</button>
+  </form>
+</section>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("TON_PUBLIC_KEY"); // 🔑 Remplace par ta clé publique EmailJS
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("TON_SERVICE_ID", "TON_TEMPLATE_ID", this)
+      .then(() => {
+        alert("✅ Merci Moussa, ton message a été envoyé avec succès !");
+        this.reset();
+      }, (error) => {
+        alert("❌ Oups, une erreur est survenue : " + JSON.stringify(error));
+      });
+  });
+</script>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="social">
+      <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+    </div>
+    <p>© 2025 Moussa - Tous droits réservés</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Merci Moussa, ton message a été envoyé !");
+      this.reset();
+    });
+  </script>
 </body>
- 
 </html>
